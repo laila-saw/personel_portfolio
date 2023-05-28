@@ -36,8 +36,8 @@ const HomePage = () => {
             <Qualification />
             <Services />
             <Portfolio />
-            <Project />
-            <Testimonial />
+            {/* <Project /> */}
+            {/* <Testimonial /> */}
             <Contact />
             <Footer />
             <a href="#home" className="scrollUp">

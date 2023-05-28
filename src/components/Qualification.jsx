@@ -1,7 +1,11 @@
 import { BusinessCenterOutlined, EventNote, School } from '@material-ui/icons'
-import React from 'react'
+import { getDuration } from '../utilFunction'
+import { qualifications } from '../data'
 
 const Qualification = () => {
+  const formatDate=(date)=>{
+    return date.substring(0,2)+"-"+date.substring(6,date.length)
+  }
     return (
         <section className="qualification section" id="qualification">
           <input
@@ -87,54 +91,29 @@ const Qualification = () => {
               {/* !quali content 1 */}
               {/* quali content 2 */}
               <div className="quali__content work" >
-                {/* quali 1 */}
-                <div className="quali__data">
-                  <div>
-                    <div className="quali__title cap">Front-End Web Developer</div>
-                    <span className="quali__subtitle cap">CodingArt - Agadir</span>
+                {
+                  qualifications.map((item,i)=>(
+                    <div key={i} className="quali__data">
+                      {(i%2!==0) && <div></div>}
+                      {(i%2!==0) && <div>
+                    <span className="quali__rounder"></span>
+                    {i!==qualifications.length-1 && <span className="quali__line"></span>}
+                  </div>}
+                   <div>
+                    <div className="quali__title cap">{item.jobTitle}</div>
+                    <span className="quali__subtitle cap">{item.company}  {item.city && "- "+ item.city}</span>
                     <div className="quali__calender">
                       <EventNote className="calender_icon" />
-                      07-2022 - 06-2023
+                      {formatDate(item.startDate) +" - "+(item.endDate ? formatDate(item.endDate) : "till Now")} ({getDuration(new Date(item.startDate), new Date(item.endDate ? item.endDate : new Date()))})
                     </div>
                   </div>
-                  <div>
+                  {(i%2===0 ) && <div>
                     <span className="quali__rounder"></span>
-                    <span className="quali__line"></span>
-                  </div>
+                    { <span className="quali__line"></span>}
+                  </div>}
                 </div>
-                {/* !quali 1 */}
-                {/* quali 2 */}
-                <div className="quali__data">
-                  <div></div>
-                  <div>
-                    <span className="quali__rounder"></span>
-                    <span className="quali__line"></span>
-                  </div>
-                  <div>
-                    <div className="quali__title cap">Software Enginner</div>
-                    <span className="quali__subtitle cap">Flash Ingenierie - Agadir</span>
-                    <div className="quali__calender">
-                      <EventNote className="calender_icon" />
-                      06-2021 - 10-2021
-                    </div>
-                  </div>
-                </div>
-                {/* !quali 2 */}
-                {/* quali 3 */}
-                <div className="quali__data">
-                  <div>
-                    <div className="quali__title cap">Freelancer developer</div>
-                    <span className="quali__subtitle cap">working remotely</span>
-                    <div className="quali__calender">
-                      <EventNote className="calender_icon" />
-                      10-2021 - till Now
-                    </div>
-                  </div>
-                  <div>
-                    <span className="quali__rounder"></span>
-                  </div>
-                </div>
-                {/* !quali 3 */}
+                  ))
+                }
               </div>
               {/* !quali content 2 */}
             </div>

@@ -45,8 +45,7 @@ const Home = () => {
               <div className="home-data">
                 <h1 className="home__title cap">hi, i'm <span className="name">La<span className="diff">ila Ouh</span>amou.</span></h1>
                 <h3 className="home__subtitle cap">full stack developer</h3>
-                <p className="home__description">Passionate about the realization and development of web projects,
-                I create high performance & rich interactive websites that work across all platforms & devices.</p>
+                <p className="home__description">With a passion for bringing web projects to life. With a strong focus on performance and user experience, I specialize in creating high-performance and rich interactive websites that seamlessly function across all platforms and devices. I thrive on the challenges of web development and take pride in delivering exceptional solutions that exceed client expectations. With my expertise and dedication, I am committed to crafting cutting-edge web experiences that leave a lasting impact.</p>
                 <a href="#contact" className="button button--flex">Contact Me <SendOutlined className='button__icon' /></a>
               </div>
             </div>
