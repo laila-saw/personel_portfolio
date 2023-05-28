@@ -87,7 +87,7 @@ export const qualifications = [
         company: "CodingArt",
         city: "Agadir",
         startDate: "07-14-2022",
-        endDate: "06-05-2023",
+        endDate: "",
     },
     {
         jobTitle: "Software Enginner",

@@ -2,7 +2,7 @@
   "name": "routerl",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://laila-saw.github.io",
+  "homepage": "https://laila-saw.github.io/personel_portfolio/",
   "dependencies": {
     "@emailjs/browser": "^3.4.0",
     "@material-ui/core": "^4.12.3",
