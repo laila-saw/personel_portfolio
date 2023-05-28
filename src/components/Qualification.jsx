@@ -109,7 +109,7 @@ const Qualification = () => {
                   </div>
                   {(i%2===0 ) && <div>
                     <span className="quali__rounder"></span>
-                    { <span className="quali__line"></span>}
+                    {i!==qualifications.length-1&& <span className="quali__line"></span>}
                   </div>}
                 </div>
                   ))
